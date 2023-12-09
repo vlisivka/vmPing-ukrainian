@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Net.NetworkInformation;
 using System.Text;
 using System.Windows.Media;

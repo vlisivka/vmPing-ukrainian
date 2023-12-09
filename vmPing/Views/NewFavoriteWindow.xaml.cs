@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -50,8 +50,8 @@ namespace vmPing.Views
 
             if (isEditExisting)
             {
-                Title = "Edit Favorite";
-                Header.Text = "Edit an existing favorite";
+                Title = "Редагування списку хостів";
+                Header.Text = "Редагування існуючого списку хоста";
                 HeaderIcon.Source = (DrawingImage)Application.Current.Resources["icon.edit"];
             }
 

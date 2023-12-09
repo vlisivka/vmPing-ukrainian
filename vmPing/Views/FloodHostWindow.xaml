@@ -1,15 +1,15 @@
-﻿<Window x:Class="vmPing.Views.FloodHostWindow"
+<Window x:Class="vmPing.Views.FloodHostWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:vmPing.Views"
         xmlns:classes="clr-namespace:vmPing.Classes"
-        Title="vmPing - Flood Host" Height="250" Width="400"
+        Title="vmPing - Навантажити хост" Height="250" Width="400"
         ResizeMode="CanMinimize"
         Background="#002b36">
 
     <Window.Resources>
         <!-- Value converters -->
-        <classes:BoolToStringConverter x:Key="BoolToStringConverter" FalseValue="Flood Host" TrueValue="Stop Flood"/>
+        <classes:BoolToStringConverter x:Key="BoolToStringConverter" FalseValue="Навантажити" TrueValue="Зупинити"/>
         <classes:BooleanToHiddenVisibilityConverter x:Key="BooleanToHiddenVisibilityConverter" />
         <classes:InverseBooleanConverter x:Key="InverseBooleanConverter" />
         <classes:BooleanToImageConverter x:Key="BooleanToImageConverter" />
@@ -127,7 +127,7 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="Packets Sent:"
+                <TextBlock Grid.Column="0" Text="Надіслано пакетів:"
                            HorizontalAlignment="Right" VerticalAlignment="Center"
                            Margin="0,0,15,0"
                            Foreground="#93a1a1"
@@ -143,7 +143,7 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="Packets Received:"
+                <TextBlock Grid.Column="0" Text="Отримано пакетів:"
                            HorizontalAlignment="Right" VerticalAlignment="Center"
                            Margin="0,0,15,0"
                            Foreground="#93a1a1"
@@ -159,7 +159,7 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="Packets Lost:"
+                <TextBlock Grid.Column="0" Text="Втрачено пакетів:"
                            HorizontalAlignment="Right" VerticalAlignment="Center"
                            Margin="0,0,15,0"
                            Foreground="#93a1a1"
@@ -171,7 +171,7 @@
             </Grid>
         </Grid>
 
-        <TextBlock Grid.Row="2" Text="Flood in progress..."
+        <TextBlock Grid.Row="2" Text="Навантаження в процесі..."
                    Name="tbStatus"
                    Margin="0,7" HorizontalAlignment="Center"
                    Foreground="#657b83"
@@ -212,8 +212,8 @@
                Padding="40,0"
                FontSize="14">
             <TextBlock TextWrapping="Wrap" TextAlignment="Justify">
-                This tool will send a continuous stream of ICMP ping packets to the destination host.
-                It typically will not generate any more than 32 kilobytes per second of network traffic.
+                Цей інструмент буде відправляти безперервний потік ICMP-пакетів до цільової машини.
+                Зазвичай, він не створить навантаження понад 32 кілобайти на секунду.
             </TextBlock>
         </Label>
         

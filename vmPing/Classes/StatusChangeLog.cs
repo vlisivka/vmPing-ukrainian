@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using vmPing.Properties;
 
 namespace vmPing.Classes

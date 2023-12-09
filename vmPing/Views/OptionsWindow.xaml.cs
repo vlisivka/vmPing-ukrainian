@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Media;
 using System.Runtime.InteropServices;
@@ -50,7 +50,7 @@ namespace vmPing.Views
             // Show warning or error?
             DialogWindow errorWindow;
             if (isWarning == true)
-                errorWindow = DialogWindow.WarningWindow(message, "Save");
+                errorWindow = DialogWindow.WarningWindow(message, "Зберегти");
             else
                 errorWindow = DialogWindow.ErrorWindow(message);
 
@@ -74,17 +74,17 @@ namespace vmPing.Views
 
             if (ApplicationOptions.PingInterval >= 3600000 && ApplicationOptions.PingInterval % 3600000 == 0)
             {
-                pingIntervalUnits = "hours";
+                pingIntervalUnits = "годин";
                 pingIntervalDivisor = 3600000;
             }
             else if (ApplicationOptions.PingInterval >= 60000 && ApplicationOptions.PingInterval % 60000 == 0)
             {
-                pingIntervalUnits = "minutes";
+                pingIntervalUnits = "хвилин";
                 pingIntervalDivisor = 60000;
             }
             else
             {
-                pingIntervalUnits = "seconds";
+                pingIntervalUnits = "секунд";
                 pingIntervalDivisor = 1000;
             }
 
@@ -243,17 +243,17 @@ namespace vmPing.Views
         {
             if (PingInterval.Text.Length == 0)
             {
-                ShowError("Please enter a valid ping interval.", GeneralTab, PingInterval);
+                ShowError("Введіть правильний інтервал між пінґами.", GeneralTab, PingInterval);
                 return false;
             }
             else if (PingTimeout.Text.Length == 0)
             {
-                ShowError("Please enter a valid ping timeout.", GeneralTab, PingTimeout);
+                ShowError("Введіть правильний час очікування відповіді пінґа.", GeneralTab, PingTimeout);
                 return false;
             }
             else if (AlertThreshold.Text.Length == 0)
             {
-                ShowError("Please enter a valid alert threshold.", GeneralTab, AlertThreshold);
+                ShowError("Введіть правильний рівень для тривоги.", GeneralTab, AlertThreshold);
                 return false;
             }
 
@@ -352,7 +352,7 @@ namespace vmPing.Views
                 }
                 else
                 {
-                    ShowError("Please enter a valid number of seconds for the auto-dismiss interval.", PopupAlertsTab, AutoDismissInterval);
+                    ShowError("Введіть правильну кількість секунд для автоматичного закриття сповіщень.", PopupAlertsTab, AutoDismissInterval);
                     return false;
                 }
             }
@@ -380,7 +380,7 @@ namespace vmPing.Views
             // Validate TTL.
             if (!regex.IsMatch(TTL.Text) || int.Parse(TTL.Text) < 1 || int.Parse(TTL.Text) > 255)
             {
-                ShowError("Please enter a valid time to live (TTL) between 1 and 255.", AdvancedTab, TTL);
+                ShowError("Введіть правильний час життя (TTL) від 1 до 255.", AdvancedTab, TTL);
                 return false;
             }
 
@@ -392,7 +392,7 @@ namespace vmPing.Views
             {
                 if (!regex.IsMatch(PacketSize.Text) || int.Parse(PacketSize.Text) < 0 || int.Parse(PacketSize.Text) > 65500)
                 {
-                    ShowError("Please enter a valid data size between 0 and 65,500.", AdvancedTab, PacketSize);
+                    ShowError("Введіть правильний розмір даних від 0 до 65,500.", AdvancedTab, PacketSize);
                     return false;
                 }
 
@@ -432,22 +432,22 @@ namespace vmPing.Views
 
                 if (SmtpServer.Text.Length == 0)
                 {
-                    ShowError("Please enter a valid SMTP server address.", EmailAlertsTab, SmtpServer);
+                    ShowError("Введіть правильну адресу сервера SMTP.", EmailAlertsTab, SmtpServer);
                     return false;
                 }
                 else if (SmtpPort.Text.Length == 0 || !regex.IsMatch(SmtpPort.Text))
                 {
-                    ShowError("Please enter a valid port number for your SMTP server.", EmailAlertsTab, SmtpPort);
+                    ShowError("Введіть правильний номер порту сервера SMTP.", EmailAlertsTab, SmtpPort);
                     return false;
                 }
                 else if (EmailRecipientAddress.Text.Length == 0)
                 {
-                    ShowError("Please enter a valid recipient email address. This address will receive email alerts from vmPing.", EmailAlertsTab, EmailRecipientAddress);
+                    ShowError("Введіть правильну адресу отримувача. Ця адреса отримуватиме сповіщення від vmPing.", EmailAlertsTab, EmailRecipientAddress);
                     return false;
                 }
                 else if (EmailFromAddress.Text.Length == 0)
                 {
-                    ShowError("Please enter a valid 'from' address. This address appears as the sender for any alerts that are sent.", EmailAlertsTab, EmailFromAddress);
+                    ShowError("Введіть правильну адресу 'з адреси'. Ця адреса буде вказана як адреса відправника у всіх листах.", EmailAlertsTab, EmailFromAddress);
                     return false;
                 }
                 if (IsSmtpAuthenticationRequired.IsChecked == true)
@@ -455,7 +455,7 @@ namespace vmPing.Views
                     ApplicationOptions.IsEmailAuthenticationRequired = true;
                     if (SmtpUsername.Text.Length == 0)
                     {
-                        ShowError("Please enter a valid username for your mail server.", EmailAlertsTab, SmtpUsername);
+                        ShowError("Вкажіть правильне ім'я користувача для вашого сервера SMTP.", EmailAlertsTab, SmtpUsername);
                         return false;
                     }
                 }
@@ -499,7 +499,7 @@ namespace vmPing.Views
                 }
                 catch
                 {
-                    ShowError("The specified path does not exist. Please enter a valid path.", AudioAlertTab, AudioDownFilePath);
+                    ShowError("Вказаний шлях не існує.  Вкажіть правильний шлях.", AudioAlertTab, AudioDownFilePath);
                     return false;
                 }
                 ApplicationOptions.IsAudioDownAlertEnabled = true;
@@ -523,7 +523,7 @@ namespace vmPing.Views
                 }
                 catch
                 {
-                    ShowError("The specified path does not exist. Please enter a valid path.", AudioAlertTab, AudioUpFilePath);
+                    ShowError("Вказаний шлях не існує.  Вкажіть правильний шлях.", AudioAlertTab, AudioUpFilePath);
                     return false;
                 }
                 ApplicationOptions.IsAudioUpAlertEnabled = true;
@@ -568,7 +568,7 @@ namespace vmPing.Views
                 }
                 catch
                 {
-                    ShowError("The specified path does not exist.  Please enter a valid path.", LogOutputTab, LogStatusChangesPath);
+                    ShowError("Вказаний шлях не існує.  Вкажіть правильний шлях.", LogOutputTab, LogStatusChangesPath);
                     return false;
                 }
 
@@ -601,7 +601,7 @@ namespace vmPing.Views
                 {
                     if (!Util.IsValidHtmlColor(((TextBox)control).Text))
                     {
-                        ShowError("Please enter a valid HTML color code.  Accepted formats are #RGB, #RRGGBB, and #AARRGGBB.  Example: #3266CF", LayoutTab, (TextBox)control);
+                        ShowError("Введіть правильний код кольору HTML.  Прийнятній формати це #RGB, #RRGGBB, and #AARRGGBB.  Приклад: #3266CF", LayoutTab, (TextBox)control);
                         ((TextBox)control).SelectAll();
 
                         return false;
@@ -669,7 +669,7 @@ namespace vmPing.Views
         private async void TestEmail_Click(object sender, RoutedEventArgs e)
         {
             TestEmailButton.IsEnabled = false;
-            TestEmailButton.Content = "Testing...";
+            TestEmailButton.Content = "Пробую...";
             var serverAddress = SmtpServer.Text;
             var serverPort = SmtpPort.Text;
             var isSslEnabled = IsSmtpSslEnabled.IsChecked == true ? true : false;
@@ -700,14 +700,14 @@ namespace vmPing.Views
                 }
             });
             TestEmailButton.IsEnabled = true;
-            TestEmailButton.Content = "Test";
+            TestEmailButton.Content = "Спробувати";
         }
 
         private void BrowseLogPath_Click(object sender, RoutedEventArgs e)
         {
             using (var dialog = new System.Windows.Forms.FolderBrowserDialog())
             {
-                dialog.Description = "Select a location for the log files.";
+                dialog.Description = "Виберіть каталог для файлів журналу.";
                 System.Windows.Forms.DialogResult result = dialog.ShowDialog();
 
                 if (result == System.Windows.Forms.DialogResult.OK)
@@ -719,7 +719,7 @@ namespace vmPing.Views
         {
             using (var dialog = new System.Windows.Forms.FolderBrowserDialog())
             {
-                dialog.Description = "Select a location for the log files.";
+                dialog.Description = "Виберіть каталог для файлів журналу.";
                 System.Windows.Forms.DialogResult result = dialog.ShowDialog();
 
                 if (result == System.Windows.Forms.DialogResult.OK)
@@ -741,10 +741,10 @@ namespace vmPing.Views
         {
             using (var audiofileDialog = new System.Windows.Forms.OpenFileDialog())
             {
-                audiofileDialog.Title = "Select an audio file";
+                audiofileDialog.Title = "Виберіть звуковий файл";
                 audiofileDialog.RestoreDirectory = true;
                 audiofileDialog.Multiselect = false;
-                audiofileDialog.Filter = "WAV files (*.wav)|*.wav|All files|*.*";
+                audiofileDialog.Filter = "Файли WAV (*.wav)|*.wav|Всі файли|*.*";
                 audiofileDialog.DefaultExt = ".wav";
 
                 if (audiofileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
@@ -773,7 +773,7 @@ namespace vmPing.Views
             }
             catch
             {
-                ShowError("Unable to play audio file.", AudioAlertTab, AudioAlertTab);
+                ShowError("Не можу програти звуковий файл.", AudioAlertTab, AudioAlertTab);
             }
         }
 

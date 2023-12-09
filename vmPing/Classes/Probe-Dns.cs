@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.ObjectModel;
 using System.Net;
 using System.Threading;
@@ -15,7 +15,7 @@ namespace vmPing.Classes
 
             try
             {
-                AddHistory($"[\u2022] Resolving {Hostname}:{Environment.NewLine}");
+                AddHistory($"[\u2022] Встановлю адресу {Hostname}:{Environment.NewLine}");
                 switch (Uri.CheckHostName(Hostname))
                 {
                     case UriHostNameType.IPv4:
@@ -34,12 +34,12 @@ namespace vmPing.Classes
                     default:
                         throw new Exception();
                 }
-                AddHistory($"{Environment.NewLine}{Environment.NewLine}\u2605 Done");
+                AddHistory($"{Environment.NewLine}{Environment.NewLine}\u2605 Виконано");
             }
             catch
             {
                 if (!cancellationToken.IsCancellationRequested)
-                    AddHistory($"{Environment.NewLine}\u2605 Unable to resolve hostname");
+                    AddHistory($"{Environment.NewLine}\u2605 Не можу знайти адресу по доменному імені хоста");
             }
             finally
             {

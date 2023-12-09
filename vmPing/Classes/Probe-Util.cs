@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Media;
@@ -112,7 +112,7 @@ namespace vmPing.Classes
                 if (!cancellationToken.IsCancellationRequested)
                 {
                     await Application.Current.Dispatcher.BeginInvoke(
-                        new Action(() => AddHistory($"{Environment.NewLine}Unable to resolve hostname")));
+                        new Action(() => AddHistory($"{Environment.NewLine}Не можу взнати адресу по доменному імені хоста.")));
                 }
                 return true;
             }
@@ -136,7 +136,7 @@ namespace vmPing.Classes
                     ApplicationOptions.IsLogOutputEnabled = false;
                     Application.Current.Dispatcher.BeginInvoke(new Action(() =>
                     {
-                        DialogWindow.ErrorWindow($"Failed writing to log file. Logging has been disabled. {ex.Message}").ShowDialog();
+                        DialogWindow.ErrorWindow($"Не можу записати у журнал. Журналювання вимкнено. {ex.Message}").ShowDialog();
                     }));
                 }
             }
@@ -159,7 +159,7 @@ namespace vmPing.Classes
                     ApplicationOptions.IsLogStatusChangesEnabled = false;
                     Application.Current.Dispatcher.BeginInvoke(new Action(() =>
                     {
-                        DialogWindow.ErrorWindow($"Failed writing to log file. Logging has been disabled. {ex.Message}").ShowDialog();
+                        DialogWindow.ErrorWindow($"Не можу записати у журнал. Журналювання вимкнено. {ex.Message}").ShowDialog();
                     }));
                 }
             }
@@ -169,7 +169,7 @@ namespace vmPing.Classes
         {
             // TODO: This should be a computed property.
             StatisticsText =
-                $"Sent: {Statistics.Sent} Received: {Statistics.Received} Lost: {Statistics.Lost}";
+                $"Надіслано: {Statistics.Sent} Отримано: {Statistics.Received} Втрачено: {Statistics.Lost}";
         }
 
         private void TriggerStatusChange(StatusChangeLog status)
@@ -230,7 +230,7 @@ namespace vmPing.Classes
                     ApplicationOptions.IsAudioDownAlertEnabled = false;
                     Application.Current.Dispatcher.BeginInvoke(new Action(() =>
                     {
-                        DialogWindow.ErrorWindow($"Failed to play audio file. Audio alerts have been disabled. {ex.Message}").ShowDialog();
+                        DialogWindow.ErrorWindow($"Не можу програти звуковий файл. Звукові сповіщення вимкнуто. {ex.Message}").ShowDialog();
                     }));
                 }
             }
@@ -248,7 +248,7 @@ namespace vmPing.Classes
                     ApplicationOptions.IsAudioUpAlertEnabled = false;
                     Application.Current.Dispatcher.BeginInvoke(new Action(() =>
                     {
-                        DialogWindow.ErrorWindow($"Failed to play audio file. Audio alerts have been disabled. {ex.Message}").ShowDialog();
+                        DialogWindow.ErrorWindow($"Не можу програти звуковий файл. Звукові сповіщення вимкнуто. {ex.Message}").ShowDialog();
                     }));
                 }
             }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Text;
@@ -14,7 +14,7 @@ namespace vmPing.Classes
         {
             InitializeProbe();
             await Application.Current.Dispatcher.BeginInvoke(
-                new Action(() => AddHistory($"*** Pinging {Hostname}:")));
+                new Action(() => AddHistory($"*** Пінґую {Hostname}:")));
 
             if (await IsHostInvalid(Hostname, cancellationToken))
             {
@@ -141,24 +141,24 @@ namespace vmPing.Classes
                 switch (pingReply.Status)
                 {
                     case IPStatus.Success:
-                        pingOutput.Append("Reply from ");
+                        pingOutput.Append("Відповідь від ");
                         pingOutput.Append(pingReply.Address.ToString());
                         if (pingReply.RoundtripTime < 1)
-                            pingOutput.Append("  [<1ms]");
+                            pingOutput.Append("  [<1мс]");
                         else
-                            pingOutput.Append($"  [{pingReply.RoundtripTime} ms]");
+                            pingOutput.Append($"  [{pingReply.RoundtripTime} мс]");
                         break;
                     case IPStatus.DestinationHostUnreachable:
-                        pingOutput.Append("Reply  [Host unreachable]");
+                        pingOutput.Append("Відповідь [Хост недосяжний]");
                         break;
                     case IPStatus.DestinationNetworkUnreachable:
-                        pingOutput.Append("Reply  [Network unreachable]");
+                        pingOutput.Append("Відповідь  [Мережа недосяжна]");
                         break;
                     case IPStatus.DestinationUnreachable:
-                        pingOutput.Append("Reply  [Unreachable]");
+                        pingOutput.Append("Відповідь  [Недосяжний]");
                         break;
                     case IPStatus.TimedOut:
-                        pingOutput.Append("Request timed out.");
+                        pingOutput.Append("Не дочекалися відповіді.");
                         break;
                     default:
                         pingOutput.Append(pingReply.Status.ToString());
@@ -168,7 +168,7 @@ namespace vmPing.Classes
             else
             {
                 if (ex.InnerException is SocketException)
-                    pingOutput.Append("Unable to resolve hostname.");
+                    pingOutput.Append("Неможливо встановити адресу по доменному імені хоста.");
                 else
                     pingOutput.Append(ex.Message);
             }

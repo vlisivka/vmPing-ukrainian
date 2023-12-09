@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -26,14 +26,14 @@ namespace vmPing.Classes
             {
                 // Error.
                 await Application.Current.Dispatcher.BeginInvoke(
-                    new Action(() => AddHistory("Invalid port number.")));
+                    new Action(() => AddHistory("Неправильний номер порту.")));
 
                 StopProbe(ProbeStatus.Error);
                 return;
             }
 
             await Application.Current.Dispatcher.BeginInvoke(
-                new Action(() => AddHistory($"*** Pinging {host} on port {portnumber}:")));
+                new Action(() => AddHistory($"*** Пінґую {host} порт {portnumber}:")));
 
             // Check whether a hostname or an IP address was provided.  If hostname, resolve and print IP.
             if (await IsHostInvalid(host, cancellationToken))
@@ -141,7 +141,7 @@ namespace vmPing.Classes
                         if (ex.ErrorCode == WSAHOST_NOT_FOUND)
                         {
                             await Application.Current.Dispatcher.BeginInvoke(
-                                new Action(() => AddHistory("Unable to resolve hostname.")));
+                                new Action(() => AddHistory("Не можу знайти адресу по доменному імені хоста.")));
 
                             StopProbe(ProbeStatus.Error);
                             return;

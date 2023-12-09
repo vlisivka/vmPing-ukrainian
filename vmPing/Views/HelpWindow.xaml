@@ -1,7 +1,7 @@
-﻿<Window x:Class="vmPing.Views.HelpWindow"
+<Window x:Class="vmPing.Views.HelpWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="vmPing Help"
+        Title="Довідка vmPing"
         UseLayoutRounding="True"
         Height="575"
         Width="750"
@@ -87,15 +87,15 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <TreeView Name="tree" FontSize="10pt" BorderThickness="0" Padding="0,20,20,20" Margin="0">
-            <TreeViewItem Header="Intro"
+            <TreeViewItem Header="Введення"
                           Selected="Intro_Selected" />
-            <TreeViewItem Header="Basic Usage"
+            <TreeViewItem Header="Основні функції"
                           Selected="BasicUsage_Selected" />
-            <TreeViewItem Header="Extra Features"
+            <TreeViewItem Header="Додаткові функції"
                           Selected="ExtraFeatures_Selected" />
-            <TreeViewItem Header="Options"
+            <TreeViewItem Header="Параметри"
                           Selected="Options_Selected" />
-            <TreeViewItem Header="Command Line Usage"
+            <TreeViewItem Header="Опції командного рядка"
                           Selected="CommandLineUsage_Selected" />
         </TreeView>
         <GridSplitter Grid.Column="1" Width="4"
@@ -133,11 +133,14 @@
                 <Paragraph Name="Version"
                            Style="{StaticResource  VersionText}"
                            Margin="0,3,0,0">
-                    Version X.XXXX.XXXX
+                    Версія X.XXXX.XXXX
                 </Paragraph>
                 <Paragraph Name="Copyright"
                            Style="{StaticResource VersionText}">
                     Copyright (C) Ryan Smith
+                </Paragraph>
+                <Paragraph Style="{StaticResource VersionText}">
+                    Переклад Володимира Лісівки
                 </Paragraph>
 
                 <!-- Intro section -->
@@ -146,9 +149,9 @@
                 </BlockUIContainer>
                 <Paragraph Name="Intro" Margin="0,5"
                            Foreground="#073642">
-                    vmPing is a network utility that allows you to quickly monitor the availability of multiple hosts.
-                    Host monitors are easily added and removed, and dynamically resize with the application window.
-                    Color-coding allows you to tell at a glance the status of each host.
+                    vmPing - це мережева утиліта, яка дозволяє швидко перевіряти доступність кількох хостів одночасно.
+                    Монітори хостів легко додавати та видаляти, а також вони динамічно змінюються розміром разом із вікном програми.
+                    Різнобарвне кодування дозволяє відразу ж побачити стан кожного хоста.
                 </Paragraph>
                 <BlockUIContainer>
                     <Rectangle HorizontalAlignment="Stretch" Fill="#f0f0f0" Height="1" />
@@ -157,126 +160,129 @@
                 <!-- Basic Usage section -->
                 <Paragraph Name="BasicUsage"
                            Style="{StaticResource HeaderText}">
-                    Basic Usage
+                    Основні функції
                 </Paragraph>
                 <Paragraph Style="{StaticResource SubHeaderText}">
-                    Application overview
+                    Огляд програми
                 </Paragraph>
                 <Paragraph Style="{StaticResource ParagraphText}">
 
                 </Paragraph>
                 <Paragraph Style="{StaticResource SubHeaderText}">
-                    Monitor a host
+                    Стеження за хостом
                 </Paragraph>
                 <Paragraph Style="{StaticResource ParagraphText}">
-                    Enter a hostname or IP address into the textbox, then press Enter or click Ping.
-                    vmPing will continuosly ping the host until you click Stop.
-                    Responses are displayed in the output area above the textbox.
-                    The output section will turn green when the host is responding and red when it is not responding.
-                    If an error occurrs, the output area will turn orange.
+
+                    Введіть ім'я хоста або IP-адресу в текстове поле, потім натисніть клавішу Ввід або кнопку кнопку [Пінґ].
+                    vmPing буде безперервно надсилати ping-запити до хоста, поки ви не натиснете [Стоп].
+                    Відповіді відображаються в області виводу над текстовим полем.
+                    Область виводу стане зеленою, коли хост відповідає, і червоною, коли він не відповідає.
+                    Якщо виникає помилка, область виводу стає помаранчевою.
                 </Paragraph>
                 <Paragraph Style="{StaticResource SubHeaderText}">
-                    Add a host monitor
+                    Додавання стеження за хостом
                 </Paragraph>
                 <Paragraph Style="{StaticResource ParagraphText}">
-                    <Run>Click</Run>
+                    <Run>Клацніть</Run>
                     <Image Source="{StaticResource icon.add}" Width="14" Height="14" Margin="3,0,0,0"/>
-                    <Run FontWeight="SemiBold">Add Host</Run>
-                    <Run>from the menu bar, or use the keyboard shortcut,</Run>
-                    <Run FontWeight="SemiBold">Alt-A</Run> .
+                    <Run FontWeight="SemiBold">Додати хост</Run>
+                    <Run>у панелі меню, або використайте клавіатурне скорочення,</Run>
+                    <Run FontWeight="SemiBold">Alt-Д</Run> .
                 </Paragraph>
                 <Paragraph Style="{StaticResource SubHeaderText}">
-                    Remove a host monitor
+                    Видалення стеження за хостом
                 </Paragraph>
                 <Paragraph Style="{StaticResource ParagraphText}">
-                    When you hover your mouse over a host monitor, an X icon will appear in the top-right corner.
-                    Click the X icon to remove that instance.
+                    Коли ви наводите курсор миші на монітор хоста, у верхньому правому куті з'явиться значок X.
+                    Натисніть значок X, щоб видалити цей екземпляр.
                 </Paragraph>
                 <Paragraph Style="{StaticResource SubHeaderText}">
-                    Columns
+                    Стовпці
                 </Paragraph>
                 <Paragraph Style="{StaticResource ParagraphText}">
-                    Click Columns in the menu bar then move the slider to the desired number of columns.
-                    This sets the number of host monitors to display in a single row.
-                    Additional rows will be created as needed.
+                    Натисніть на пункт меню "Стовпці".
+                    Перемістіть повзунок на потрібну кількість стовпців.
+                    Це встановлює кількість моніторів хостів, що відображаються в одному рядку.
+                    Додаткові рядки будуть створені за потребою.
                 </Paragraph>
 
                 <!-- Extra Features section -->
                 <Paragraph Name="ExtraFeatures"
                            Style="{StaticResource HeaderText}">
-                    Extra Features
+                    Додаткова функціональність
                 </Paragraph>
                 <Paragraph Style="{StaticResource SubHeaderText}">
-                    Port Monitor
+                    Монітор портів
                 </Paragraph>
                 <Paragraph Style="{StaticResource ParagraphText}">
-                    To monitor a specific TCP port, simply enter the hostname or IP address followed by a colon and the desired port number.
-                    vmPing will then continuously try to connect to the given port and display whether or not the connection is successful.
-                    Example -
-                    <Bold>SERVER01:80</Bold> , will monitor port 80 on SERVER01.
+                    Щоб відстежувати конкретний TCP-порт, просто введіть ім'я хоста або IP-адресу, потім двокрапку та потрібний номер порту.
+                    vmPing потім буде постійно намагатися підключитися до вказаного порту та показувати, чи успішне підключення.
+
+                    Приклад:
+                    <Bold>SERVER01:80</Bold> - відстежуватиме порт 80 на SERVER01.
                 </Paragraph>
                 <Paragraph Style="{StaticResource SubHeaderText}">
-                    Trace Route
+                    Простежити маршрут
                 </Paragraph>
                 <Paragraph Style="{StaticResource ParagraphText}">
-                    The trace route utility is used to measure network delays and determine the path taken to the given destination host.
-                    The utlity can be accessed from the dropdown icon in the top right or by pressing Ctrl-T.
+                    Утиліта трасування використовується для вимірювання затримки мережі та визначення маршруту до заданого хоста призначення.
+                    Доступ до утиліти можна отримати з розкривного меню у верхньому правому куті або натиснувши Ctrl+T.
                 </Paragraph>
                 <Paragraph Style="{StaticResource SubHeaderText}">
-                    Flood Host
+                    Навантажити хост
                 </Paragraph>
                 <Paragraph Style="{StaticResource ParagraphText}">
-                    The flood host utility is used to generate a significant amount of ICMP packets.
-                    To limit the flow, the utility waits until a reply is received before sending the next ICMP packet.
-                    The utlity can be accessed from dropdown icon in the top right or by pressing Ctrl-F.
+                    Утиліта "Навантаження хосту" використовується для генерації великої кількості ICMP-пакетів.
+                    Щоб обмежити потік, утиліта очікує на отримання відповіді перед надсиланням наступного ICMP-пакету.
+                    Доступ до утиліти можна отримати з розкривного меню у верхньому правому куті або натиснувши Ctrl+F.
                 </Paragraph>
 
                 <!-- Options section -->
                 <Paragraph Name="Options"
                            Style="{StaticResource HeaderText}">
-                    Options
+                    Параметри
                 </Paragraph>
                 <Paragraph Style="{StaticResource SubHeaderText}">
-                    Ping interval
+                    Інтервал між пінґами
                 </Paragraph>
                 <Paragraph Style="{StaticResource ParagraphText}">
-                    The time to wait between sending each packet.  The time can be specified in seconds, minutes, or hours.
+                    Час між надсиланнями наступного пакету. Час може бути встановлений в секундах, хвилинах, годинах, днях.
                 </Paragraph>
                 <Paragraph Style="{StaticResource SubHeaderText}">
-                    Ping timeout
+                    Час чекання відповіді на пінґ
                 </Paragraph>
                 <Paragraph Style="{StaticResource ParagraphText}">
-                    The maximum time to wait for a response, in seconds.
+                    Максимальний час очікування на відповідь, в секундах.
                 </Paragraph>
                 <Paragraph Style="{StaticResource SubHeaderText}">
-                    Send email when host goes down or up
+                    Надсилати поштою повідомлення коли хост впаде чи підніметься
                 </Paragraph>
                 <Paragraph Style="{StaticResource ParagraphText}">
-                    Send an email each time a host changes status (from down to up or from up to down).
-                    A mail server, recipient email address, and from email address must all be specified.
+                    Надсилати електронний лист щоразу, коли стан хоста змінюється (з відключеного на підключений або з підключеного на відключений).
+                    Необхідно вказати поштовий сервер, адресу електронної пошти одержувача та адресу електронної пошти відправника.
                 </Paragraph>
                 <Paragraph Style="{StaticResource SubHeaderText}">
-                    Keep window always on top
+                    Тримати вікно поверх інших вікон
                 </Paragraph>
                 <Paragraph Style="{StaticResource ParagraphText}">
-                    The vmPing window will remain on top of all other application windows.
+                    Вікно vmPing буде триматися поверх інших вікон.
                 </Paragraph>
                 <Paragraph Style="{StaticResource SubHeaderText}">
-                    Log all output to files
+                    Зберегти весь вивід у файл
                 </Paragraph>
                 <Paragraph Style="{StaticResource ParagraphText}">
-                    Write all ping responses to a text file.
-                    The file will be named &lt;hostname&gt;.txt and will be saved to the specified directory.
-                    If the file already exists, new output will be appended to the existing file.
+                    Записувати всі відповіді ping-запитів до текстового файла.
+                    Файл буде називатися "hostname".txt і буде збережено до вказаного каталогу.
+                    Якщо файл вже існує, новий вивід буде додано до існуючого файлу.
                 </Paragraph>
 
                 <!-- Command Line Usage section -->
                 <Paragraph Name="CommandLineUsage"
                            Style="{StaticResource HeaderText}">
-                    Command Line Usage
+                    Опції командного рядка
                 </Paragraph>
                 <Paragraph Style="{StaticResource SubHeaderText}">
-                    Usage: vmPing [-i interval] [-w timeout] [&lt;target_host>...]
+                    Використання: vmPing [-i інтервал] [-w очікування] [&lt;цільовий_хост>...]
                 </Paragraph>
 
                 <!-- TODO: Convert to table-->

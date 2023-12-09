@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Net.NetworkInformation;
@@ -61,12 +61,12 @@ namespace vmPing.Classes
 
                         if (reply.Status == IPStatus.Success)
                         {
-                            AddHistory($"{Environment.NewLine}\u2605 Trace complete");
+                            AddHistory($"{Environment.NewLine}\u2605 Трасування успішне");
                             break;
                         }
 
                         ttl++;
-                        if (ttl > MaxHops) AddHistory($"{Environment.NewLine}\u2605 Trace complete");
+                        if (ttl > MaxHops) AddHistory($"{Environment.NewLine}\u2605 Трасування завершено");
                         await Task.Delay(100);
                     }
                     catch (Exception ex)
