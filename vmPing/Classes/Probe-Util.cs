@@ -230,7 +230,7 @@ namespace vmPing.Classes
                     ApplicationOptions.IsAudioDownAlertEnabled = false;
                     Application.Current.Dispatcher.BeginInvoke(new Action(() =>
                     {
-                        DialogWindow.ErrorWindow($"Не можу програти звуковий файл. Звукові сповіщення вимкнуто. {ex.Message}").ShowDialog();
+                        DialogWindow.ErrorWindow($"Не можу відтворити звуковий файл. Звукові сповіщення вимкнуто. {ex.Message}").ShowDialog();
                     }));
                 }
             }
@@ -248,7 +248,7 @@ namespace vmPing.Classes
                     ApplicationOptions.IsAudioUpAlertEnabled = false;
                     Application.Current.Dispatcher.BeginInvoke(new Action(() =>
                     {
-                        DialogWindow.ErrorWindow($"Не можу програти звуковий файл. Звукові сповіщення вимкнуто. {ex.Message}").ShowDialog();
+                        DialogWindow.ErrorWindow($"Не можу відтворити звуковий файл. Звукові сповіщення вимкнуто. {ex.Message}").ShowDialog();
                     }));
                 }
             }

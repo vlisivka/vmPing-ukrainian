@@ -477,7 +477,7 @@
                                   Content="Повідомляти звуком: хост ліг"
                                   IsChecked="True"/>
                         <Label Style="{StaticResource LabelToolTip}">
-                            Увімкніть щоб програти мелодію, коли хост ліг.
+                            Увімкніть щоб відтворити мелодію, коли хост ляже.
                         </Label>
                     </StackPanel>
 
@@ -529,7 +529,7 @@
                                   Content="Повідомляти звуком: хост піднявся"
                                   IsChecked="True"/>
                         <Label Style="{StaticResource LabelToolTip}">
-                            Увімкніть щоб програти мелодію, коли хост піднявся.
+                            Увімкніть щоб відтворити мелодію, коли хост підніметься.
                         </Label>
                     </StackPanel>
 
