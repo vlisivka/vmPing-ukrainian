@@ -168,7 +168,7 @@ namespace vmPing.Classes
             else
             {
                 if (ex.InnerException is SocketException)
-                    pingOutput.Append("Неможливо встановити адресу по доменному імені хоста.");
+                    pingOutput.Append("Неможливо встановити адресу через доменне ім'я хоста.");
                 else
                     pingOutput.Append(ex.Message);
             }

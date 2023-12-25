@@ -141,7 +141,7 @@ namespace vmPing.Classes
                         if (ex.ErrorCode == WSAHOST_NOT_FOUND)
                         {
                             await Application.Current.Dispatcher.BeginInvoke(
-                                new Action(() => AddHistory("Не можу знайти адресу по доменному імені хоста.")));
+                                new Action(() => AddHistory("Не можу знайти адресу через доменне ім'я хоста.")));
 
                             StopProbe(ProbeStatus.Error);
                             return;

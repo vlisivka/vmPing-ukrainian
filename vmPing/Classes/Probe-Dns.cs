@@ -39,7 +39,7 @@ namespace vmPing.Classes
             catch
             {
                 if (!cancellationToken.IsCancellationRequested)
-                    AddHistory($"{Environment.NewLine}\u2605 Не можу знайти адресу по доменному імені хоста");
+                    AddHistory($"{Environment.NewLine}\u2605 Не можу знайти адресу через доменне ім'я хоста");
             }
             finally
             {

@@ -16,7 +16,7 @@ namespace vmPing.Classes
             History = new ObservableCollection<string>();
             Status = ProbeStatus.Scanner;
 
-            AddHistory($"[\u2022] Tracing route to {Hostname}:");
+            AddHistory($"[\u2022] Трасую маршрут до {Hostname}:");
             if (await IsHostInvalid(Hostname, cancellationToken))
             {
                 if (cancellationToken.IsCancellationRequested)
@@ -30,7 +30,7 @@ namespace vmPing.Classes
             {
                 const int MaxHops = 30;
                 const int Timeout = 2000;
-                const string stringFormat = "{0,2}   {1,-15}   [{2} ms]";
+                const string stringFormat = "{0,2}   {1,-15}   [{2} мс]";
                 const string stringErrorFormat = "{0,2}   {1}";
                 var ttl = 1;
                 var timer = new Stopwatch();

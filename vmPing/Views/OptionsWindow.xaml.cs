@@ -601,7 +601,7 @@ namespace vmPing.Views
                 {
                     if (!Util.IsValidHtmlColor(((TextBox)control).Text))
                     {
-                        ShowError("Введіть правильний код кольору HTML.  Прийнятній формати це #RGB, #RRGGBB, and #AARRGGBB.  Приклад: #3266CF", LayoutTab, (TextBox)control);
+                        ShowError("Введіть правильний код кольору HTML.  Прийнятні формати це #RGB, #RRGGBB, and #AARRGGBB.  Приклад: #3266CF", LayoutTab, (TextBox)control);
                         ((TextBox)control).SelectAll();
 
                         return false;
@@ -773,7 +773,7 @@ namespace vmPing.Views
             }
             catch
             {
-                ShowError("Не можу програти звуковий файл.", AudioAlertTab, AudioAlertTab);
+                ShowError("Не можу відтворити звуковий файл.", AudioAlertTab, AudioAlertTab);
             }
         }
 

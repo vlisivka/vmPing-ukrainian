@@ -46,7 +46,7 @@ namespace vmPing.Views
                 TraceData.Columns[1].Width = new DataGridLength(100.0);
                 TraceData.Columns[1].Width = new DataGridLength(1.0, DataGridLengthUnitType.Auto);
 
-                TraceStatus.Text = "Tracing route...";
+                TraceStatus.Text = "Трасую маршрут...";
                 TraceStatus.Visibility = Visibility.Visible;
                 Route.DestinationHost = Hostname.Text;
                 Route.MaxHops = 30;
@@ -68,7 +68,7 @@ namespace vmPing.Views
                 Route.BgWorker.CancelAsync();
                 Route.ResetEvent.WaitOne();
                 Route.IsActive = false;
-                TraceStatus.Text = "\u2022 Trace cancelled";
+                TraceStatus.Text = "\u2022 Трасування скасоване";
                 Hostname.Focus();
             }
         }
@@ -146,7 +146,7 @@ namespace vmPing.Views
 
             if (e.ProgressPercentage < 0)
             {
-                TraceStatus.Text = "\u2022 Invalid hostname";
+                TraceStatus.Text = "\u2022 Невірне ім'я хоста";
                 return;
             }
 
@@ -160,10 +160,10 @@ namespace vmPing.Views
             node.RoundTripTime = Route.Timer.ElapsedMilliseconds;
 
             if (node.ReplyStatus == IPStatus.TimedOut)
-                node.HostAddress = "Timed out";
+                node.HostAddress = "Час вийшов";
 
             if (node.ReplyStatus == IPStatus.Success)
-                TraceStatus.Text = "\u2605 Trace complete";
+                TraceStatus.Text = "\u2605 Трасування завершене";
 
             Route.networkRoute.Add(node);
             TraceData.ScrollIntoView(TraceData.Items[Route.networkRoute.Count - 1]);

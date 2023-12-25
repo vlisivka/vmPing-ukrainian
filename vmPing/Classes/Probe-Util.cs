@@ -112,7 +112,7 @@ namespace vmPing.Classes
                 if (!cancellationToken.IsCancellationRequested)
                 {
                     await Application.Current.Dispatcher.BeginInvoke(
-                        new Action(() => AddHistory($"{Environment.NewLine}Не можу взнати адресу по доменному імені хоста.")));
+                        new Action(() => AddHistory($"{Environment.NewLine}Не можу взнати адресу через доменне ім'я хоста.")));
                 }
                 return true;
             }

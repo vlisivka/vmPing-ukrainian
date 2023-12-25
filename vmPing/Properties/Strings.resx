@@ -270,7 +270,7 @@
     <value>Історія стану</value>
   </data>
   <data name="Menu_Traceroute" xml:space="preserve">
-    <value>Трасування шляху</value>
+    <value>Трасування маршруту</value>
   </data>
   <data name="Milliseconds_Symbol" xml:space="preserve">
     <value>мс</value>
@@ -355,7 +355,7 @@
     <value>Не дочекалися відповіді.</value>
   </data>
   <data name="Probe_UnableToResolve" xml:space="preserve">
-    <value>Не можу знайти адресу по доменному імені хоста.</value>
+    <value>Не можу знайти адресу через доменне ім'я хоста.</value>
   </data>
   <data name="Probe_Unreachable" xml:space="preserve">
     <value>Відповідь [Недосяжний]</value>

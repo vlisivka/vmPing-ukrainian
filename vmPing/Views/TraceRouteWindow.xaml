@@ -61,7 +61,7 @@
         <TextBlock DockPanel.Dock="Top"
                    Style="{StaticResource ResourceKey=OptionHeaderTextStyle}"
                    Margin="0,5,0,10"
-                   Text="Простежити шлях"/>
+                   Text="Простежити маршрут"/>
         <Grid DockPanel.Dock="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -238,7 +238,7 @@
                 </DataGridTextColumn>
 
                 <!-- Round trip time -->
-                <DataGridTextColumn Binding="{Binding RoundTripTime, StringFormat=[{0} мс]}" Header="Тривалість подорожі пакета" Width="*">
+                <DataGridTextColumn Binding="{Binding RoundTripTime, StringFormat=[{0} мс]}" Header="Тривалість подорожі пакету" Width="*">
                     <DataGridTextColumn.CellStyle>
                         <Style TargetType="DataGridCell">
                             <Setter Property="Foreground" Value="#61b8ff"/>
