@@ -141,7 +141,7 @@ namespace vmPing.Classes
                 switch (pingReply.Status)
                 {
                     case IPStatus.Success:
-                        pingOutput.Append("Відповідь від ");
+                        pingOutput.Append("Відповів ");
                         pingOutput.Append(pingReply.Address.ToString());
                         if (pingReply.RoundtripTime < 1)
                             pingOutput.Append("  [<1мс]");
@@ -152,10 +152,10 @@ namespace vmPing.Classes
                         pingOutput.Append("Відповідь [Хост недосяжний]");
                         break;
                     case IPStatus.DestinationNetworkUnreachable:
-                        pingOutput.Append("Відповідь  [Мережа недосяжна]");
+                        pingOutput.Append("Відповідь [Мережа недосяжна]");
                         break;
                     case IPStatus.DestinationUnreachable:
-                        pingOutput.Append("Відповідь  [Недосяжний]");
+                        pingOutput.Append("Відповідь [Недосяжний]");
                         break;
                     case IPStatus.TimedOut:
                         pingOutput.Append("Не дочекалися відповіді.");
