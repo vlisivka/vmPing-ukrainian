@@ -53,7 +53,13 @@ namespace vmPing.Classes
                                     Util.SendEmail("up", Hostname, Alias);
                             }
 
-                            Status = ProbeStatus.Up;
+                            if (reply.RoundtripTime > 100) // TODO: make latency configurable in options
+                            {
+                                Status = ProbeStatus.LatencyHigh;
+                            }
+                            else { 
+                                Status = ProbeStatus.Up;
+                            }
                         }
                         // No reply received.
                         else
