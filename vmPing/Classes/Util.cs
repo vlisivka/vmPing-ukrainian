@@ -88,9 +88,9 @@ namespace vmPing.Classes
             string mailRecipient)
         {
             string mailFromFriendly = "vmPing";
-            string mailSubject = $"[vmPing] Test Email Notification";
+            string mailSubject = $"[vmPing] Тестове повідомлення";
             string mailBody =
-                $"{DateTime.Now.ToLongDateString()} {DateTime.Now.ToLongTimeString()} - This is a test email notification sent by vmPing.";
+                $"{DateTime.Now.ToLongDateString()} {DateTime.Now.ToLongTimeString()} - Це тестове повідомлення надіслане з vmPing.";
             MailAddress fromAddress;
 
             using (SmtpClient smtpClient = new SmtpClient())

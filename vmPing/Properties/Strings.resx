@@ -367,7 +367,7 @@
     <value>[помилка]</value>
   </data>
   <data name="StatusChange_LatencyHigh" xml:space="preserve">
-    <value>висока затримка</value>
+    <value>довга затримка</value>
   </data>
   <data name="StatusChange_LatencyNormal" xml:space="preserve">
     <value>нормальна затримка</value>

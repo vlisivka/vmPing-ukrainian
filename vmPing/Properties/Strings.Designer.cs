@@ -790,7 +790,7 @@ namespace vmPing.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to висока затримка.
+        ///   Looks up a localized string similar to довга затримка.
         /// </summary>
         public static string StatusChange_LatencyHigh {
             get {
