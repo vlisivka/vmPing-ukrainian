@@ -158,7 +158,7 @@
     <comment>Parsed as:  Enter an alias for {hostname}</comment>
   </data>
   <data name="Email_Down" xml:space="preserve">
-    <value>лежить</value>
+    <value>впав</value>
   </data>
   <data name="Email_Error" xml:space="preserve">
     <value>помилка</value>
@@ -167,7 +167,7 @@
     <value>Хост</value>
   </data>
   <data name="Email_Up" xml:space="preserve">
-    <value>живий</value>
+    <value>піднявся</value>
   </data>
   <data name="Email_Verb" xml:space="preserve">
     <value> </value>
@@ -243,7 +243,7 @@
     <value>Імена</value>
   </data>
   <data name="Menu_FavoriteSets" xml:space="preserve">
-    <value>Набори хостів</value>
+    <value>Списки хостів</value>
   </data>
   <data name="Menu_FloodHost" xml:space="preserve">
     <value>Навантажити хост</value>
@@ -294,7 +294,7 @@
     <value>Введіть правильну назву цього списку хостів</value>
   </data>
   <data name="NewFavorite_Header" xml:space="preserve">
-    <value>Створити новий набір зостів</value>
+    <value>Створити новий список зостів</value>
   </data>
   <data name="NewFavorite_SelectedHostsHeader" xml:space="preserve">
     <value>Вибрані хости</value>
@@ -361,7 +361,7 @@
     <value>Відповідь [Недосяжний]</value>
   </data>
   <data name="StatusChange_Down" xml:space="preserve">
-    <value>лежить</value>
+    <value>впав</value>
   </data>
   <data name="StatusChange_Error" xml:space="preserve">
     <value>[помилка]</value>
@@ -379,13 +379,13 @@
     <value>зупинено</value>
   </data>
   <data name="StatusChange_Up" xml:space="preserve">
-    <value>живий</value>
+    <value>піднявся</value>
   </data>
   <data name="StatusHistory_NoChanges" xml:space="preserve">
     <value>Немає історії стану</value>
   </data>
   <data name="StatusHistory_NoChangesDescription" xml:space="preserve">
-    <value>Зміни стану хоста між лежить і живий будуть тут.</value>
+    <value>Зміни стану хоста між впав і піднявся будуть тут.</value>
   </data>
   <data name="StatusHistory_WindowTitle" xml:space="preserve">
     <value>Історія стану</value>

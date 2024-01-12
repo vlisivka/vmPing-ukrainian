@@ -285,7 +285,7 @@
                             <Grid Width="100">
                                 <CheckBox x:Name="FilterUp"
                                           Style="{StaticResource CheckBoxStyle.Dark}"
-                                          Content="Живий"
+                                          Content="Піднявся"
                                           IsChecked="True"
                                           Click="Filter_Click"/>
                             </Grid>
@@ -299,7 +299,7 @@
                             <Grid Width="100">
                                 <CheckBox x:Name="FilterDown"
                                           Style="{StaticResource CheckBoxStyle.Dark}"
-                                          Content="Лежить"
+                                          Content="Впав"
                                           IsChecked="True"
                                           Click="Filter_Click"/>
                             </Grid>

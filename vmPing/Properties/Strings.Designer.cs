@@ -178,7 +178,7 @@ namespace vmPing.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to лежить.
+        ///   Looks up a localized string similar to впав.
         /// </summary>
         public static string Email_Down {
             get {
@@ -205,7 +205,7 @@ namespace vmPing.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to живий.
+        ///   Looks up a localized string similar to піднявся.
         /// </summary>
         public static string Email_Up {
             get {
@@ -421,7 +421,7 @@ namespace vmPing.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Набори хостів.
+        ///   Looks up a localized string similar to Списки хостів.
         /// </summary>
         public static string Menu_FavoriteSets {
             get {
@@ -574,7 +574,7 @@ namespace vmPing.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Створити новий набір зостів.
+        ///   Looks up a localized string similar to Створити новий список зостів.
         /// </summary>
         public static string NewFavorite_Header {
             get {
@@ -772,7 +772,7 @@ namespace vmPing.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to лежить.
+        ///   Looks up a localized string similar to впав.
         /// </summary>
         public static string StatusChange_Down {
             get {
@@ -826,7 +826,7 @@ namespace vmPing.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to живий.
+        ///   Looks up a localized string similar to піднявся.
         /// </summary>
         public static string StatusChange_Up {
             get {
@@ -844,7 +844,7 @@ namespace vmPing.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Зміни стану хоста між лежить і живий будуть тут..
+        ///   Looks up a localized string similar to Зміни стану хоста між впав і піднявся будуть тут..
         /// </summary>
         public static string StatusHistory_NoChangesDescription {
             get {

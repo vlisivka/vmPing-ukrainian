@@ -101,7 +101,7 @@
                               Width="200">
                         <ComboBoxItem Content="Порожнім (типово)" Tag="Standard" IsSelected="True"/>
                         <ComboBoxItem Content="Показати вікно вибору" Tag="Standard"/>
-                        <ComboBoxItem Content="Завантажити набір хостів" Tag="Favorite"/>
+                        <ComboBoxItem Content="Завантажити список хостів" Tag="Favorite"/>
                     </ComboBox>
                     <!-- Initial probe / column count -->
                     <StackPanel DockPanel.Dock="Top"
@@ -156,7 +156,7 @@
                         </StackPanel.Style>
                         <!-- Favorite selection -->
                         <StackPanel Margin="0,0,35,0">
-                            <TextBlock Text="Виберіть набір хостів:"
+                            <TextBlock Text="Виберіть список хостів:"
                                        Margin="0,0,0,4"/>
                             <ComboBox DockPanel.Dock="Top"
                                       Name="InitialFavorite"
@@ -278,7 +278,7 @@
                                    Style="{StaticResource OptionHeaderTextStyle}"/>
                         <Label DockPanel.Dock="Left" Style="{StaticResource LabelToolTip}">
                             <TextBlock>
-                                Сповіщення показуються у нижньому правому кутку вашого екрану, коли хост під спостереження змінює статус (лежить або живий).
+                                Сповіщення показуються у нижньому правому кутку вашого екрану, коли хост під спостереження змінює статус (впав або піднявся).
                                 <LineBreak/>
                                 <LineBreak/>
                                 Можливо завжди показувати сповіщення, або тільки коли vmPing сховано, або заборонити повністю.
@@ -737,12 +737,12 @@
                             <Border Background="{Binding ElementName=BackgroundColor_Probe_Inactive, Path=Text, Converter={StaticResource StringToBrushConverter}}"/>
                         </StackPanel>
                         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,5,0,0">
-                            <TextBlock Width="150" Text="Живий"/>
+                            <TextBlock Width="150" Text="Піднявся"/>
                             <TextBox Name="BackgroundColor_Probe_Up"/>
                             <Border Background="{Binding ElementName=BackgroundColor_Probe_Up, Path=Text, Converter={StaticResource StringToBrushConverter}}"/>
                         </StackPanel>
                         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,5,0,0">
-                            <TextBlock Width="150" Text="Лежить"/>
+                            <TextBlock Width="150" Text="Впав"/>
                             <TextBox Name="BackgroundColor_Probe_Down"/>
                             <Border Background="{Binding ElementName=BackgroundColor_Probe_Down, Path=Text, Converter={StaticResource StringToBrushConverter}}"/>
                         </StackPanel>
@@ -769,12 +769,12 @@
                             <Border Background="{Binding ElementName=ForegroundColor_Probe_Inactive, Path=Text, Converter={StaticResource StringToBrushConverter}}"/>
                         </StackPanel>
                         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,5,0,0">
-                            <TextBlock Width="150" Text="Живий"/>
+                            <TextBlock Width="150" Text="Піднявся"/>
                             <TextBox Name="ForegroundColor_Probe_Up"/>
                             <Border Background="{Binding ElementName=ForegroundColor_Probe_Up, Path=Text, Converter={StaticResource StringToBrushConverter}}"/>
                         </StackPanel>
                         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,5,0,0">
-                            <TextBlock Width="150" Text="Лежить"/>
+                            <TextBlock Width="150" Text="Впав"/>
                             <TextBox Name="ForegroundColor_Probe_Down"/>
                             <Border Background="{Binding ElementName=ForegroundColor_Probe_Down, Path=Text, Converter={StaticResource StringToBrushConverter}}"/>
                         </StackPanel>
@@ -801,12 +801,12 @@
                             <Border Background="{Binding ElementName=ForegroundColor_Stats_Inactive, Path=Text, Converter={StaticResource StringToBrushConverter}}"/>
                         </StackPanel>
                         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,5,0,0">
-                            <TextBlock Width="150" Text="Живий"/>
+                            <TextBlock Width="150" Text="Піднявся"/>
                             <TextBox Name="ForegroundColor_Stats_Up"/>
                             <Border Background="{Binding ElementName=ForegroundColor_Stats_Up, Path=Text, Converter={StaticResource StringToBrushConverter}}"/>
                         </StackPanel>
                         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,5,0,0">
-                            <TextBlock Width="150" Text="Лежить"/>
+                            <TextBlock Width="150" Text="Впав"/>
                             <TextBox Name="ForegroundColor_Stats_Down"/>
                             <Border Background="{Binding ElementName=ForegroundColor_Stats_Down, Path=Text, Converter={StaticResource StringToBrushConverter}}"/>
                         </StackPanel>
@@ -833,12 +833,12 @@
                             <Border Background="{Binding ElementName=ForegroundColor_Alias_Inactive, Path=Text, Converter={StaticResource StringToBrushConverter}}"/>
                         </StackPanel>
                         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,5,0,0">
-                            <TextBlock Width="150" Text="Живий"/>
+                            <TextBlock Width="150" Text="Піднявся"/>
                             <TextBox Name="ForegroundColor_Alias_Up"/>
                             <Border Background="{Binding ElementName=ForegroundColor_Alias_Up, Path=Text, Converter={StaticResource StringToBrushConverter}}"/>
                         </StackPanel>
                         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,5,0,0">
-                            <TextBlock Width="150" Text="Лежить"/>
+                            <TextBlock Width="150" Text="Впав"/>
                             <TextBox Name="ForegroundColor_Alias_Down"/>
                             <Border Background="{Binding ElementName=ForegroundColor_Alias_Down, Path=Text, Converter={StaticResource StringToBrushConverter}}"/>
                         </StackPanel>
