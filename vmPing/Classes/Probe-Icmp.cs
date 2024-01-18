@@ -66,7 +66,7 @@ namespace vmPing.Classes
                         {
                             Statistics.Lost++;
                             IndeterminateCount++;
-                            if (Status == ProbeStatus.Up) Status = ProbeStatus.Indeterminate;
+                            if (Status == ProbeStatus.Up || Status == ProbeStatus.LatencyHigh) Status = ProbeStatus.Indeterminate;
                             if (Status == ProbeStatus.Inactive) Status = ProbeStatus.Down;
 
                             // Check for status change.

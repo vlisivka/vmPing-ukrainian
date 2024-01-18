@@ -122,7 +122,7 @@ namespace vmPing.Classes
                         // Check if this task was cancelled.
                         if (cancellationToken.IsCancellationRequested) return;
 
-                        if (Status == ProbeStatus.Up)
+                        if (Status == ProbeStatus.Up || Status == ProbeStatus.LatencyHigh)
                             Status = ProbeStatus.Indeterminate;
                         if (Status == ProbeStatus.Inactive)
                             Status = ProbeStatus.Down;

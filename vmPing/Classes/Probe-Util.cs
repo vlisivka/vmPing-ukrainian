@@ -234,7 +234,7 @@ namespace vmPing.Classes
                     }));
                 }
             }
-            else if ((ApplicationOptions.IsAudioUpAlertEnabled) && (status.Status == ProbeStatus.Up))
+            else if ((ApplicationOptions.IsAudioUpAlertEnabled) && (status.Status == ProbeStatus.Up || status.Status == ProbeStatus.LatencyHigh))
             {
                 try
                 {

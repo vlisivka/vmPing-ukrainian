@@ -54,6 +54,7 @@ namespace vmPing.Classes
                     case ProbeStatus.Error:
                     case ProbeStatus.Down:
                         return "u";
+                    case ProbeStatus.LatencyHigh:
                     case ProbeStatus.Up:
                         return "t";
                     default:

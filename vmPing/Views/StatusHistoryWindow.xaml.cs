@@ -99,7 +99,7 @@ namespace vmPing.Views
                 statusMatch = true;
             if (FilterStop.IsChecked == true && entry.Status == ProbeStatus.Stop)
                 statusMatch = true;
-            if (FilterUp.IsChecked == true && entry.Status == ProbeStatus.Up)
+            if (FilterUp.IsChecked == true && (entry.Status == ProbeStatus.Up || entry.Status == ProbeStatus.LatencyHigh))
                 statusMatch = true;
             if (FilterDown.IsChecked == true && entry.Status == ProbeStatus.Down)
                 statusMatch = true;
