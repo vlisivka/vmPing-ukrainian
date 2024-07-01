@@ -16,6 +16,7 @@
         StateChanged="Window_StateChanged"
         Closing="Window_Closing"
         ContentRendered="Window_ContentRendered"
+        Icon="/Resources/vmPing-16.png"
         IsVisibleChanged="Window_IsVisibleChanged">
 
     <Window.Resources>
